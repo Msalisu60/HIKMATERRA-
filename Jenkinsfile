@@ -11,6 +11,12 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Build & Dependencies') {
             steps {
                 echo 'Installing dependencies and building application...'
